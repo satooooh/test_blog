@@ -34,7 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # gem 'byebug'
+  gem 'refinerycms-testing', '~> 3.0.5'
 end
 
 group :development do
@@ -53,6 +54,7 @@ gem 'refinerycms', '~> 3.0'
 gem 'refinerycms-acts-as-indexed'
 gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 gem 'refinerycms-authentication-devise', '~> 1.0'
+gem "refinerycms-news", ['~> 3.0', '>= 3.0.0'], github: 'refinery/refinerycms-news', branch: 'master'
 gem 'refinerycms-blog', ['~> 3.0', '>= 3.0.0'], git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 #  gem 'refinerycms-inquiries', ['~> 3.0', '>= 3.0.0']
 gem 'refinerycms-search', ['~> 3.0', '>= 3.0.0'], github: 'refinery/refinerycms-search', branch: 'master'

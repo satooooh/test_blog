@@ -2,65 +2,39 @@
 <%= link_to Refinery::Core.site_name, refinery.root_path %>
 </h1>
 <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-<header class="header">
-    <!--ロゴ-->
-    <a href="">
-      <h1 class="header__logo">fladia｜フラディア</h1>
-      <img class="header__logo__image" src="" alt="fladia｜フラディア">
-    </a>
-    <!--検索窓-->
-    <div class="search">
-<!--       <form class="search-form" action="" accept-charset="UTF-8" method="get">
-        <input class="search-text" type="text" placeholder="キーワードを入力">
-        <button class="search-button" tyoe="submit">
-          <i class="fa fa-search"></i>
-        </button>
-      </form> -->
-      <!-- <%= form_tag refinery.search_root_path, method: 'get' do %> -->
- <!--        <input type="search" name="q" placeholder="Find Stuff">
-        <button type="submit">Search</button>
-      <% end %> -->
-      <%= form_tag refinery.search_root_path, method: 'get' do %>
-<!--         <%= label_tag 'query', t('.search_label') %> -->
-        <%= text_field_tag :query, {}, {type: "search", placeholder: t(".search_site_for"), value: (params[:query] if params[:query])} %>
-        <%= submit_tag t(".go") %>
-      <% end %>
+  <header class="header">
+    <div class="header-upper clearfix">
+      <p class="introduction">花と植物でもっと明るく楽しい毎日を提案する情報メディア</p>
+      <h1 class="logo">
+        <a href="#">fladia｜フラディア</a>
+      </h1>
+      <div class="search">
+        <form class="search-box">
+        <input class="search-input" type="text" name="search" placeholder="キーワードでさがす">
+        <input class="search-button" type="submit" value="検索">
+        </form>
+        <div class="keyword">
+          <ul class="keyword-list">
+            <li class="keyword-item">キーワード１</li>
+            <li class="keyword-item">キーワード２</li>
+            <li class="keyword-item">キーワード３</li>
+          </ul>
+        </div>
+      </div>
+      <div class="member">
+        <ul class="member-menu">
+          <li class="member-item">無料会員登録</li>
+          <li class="member-item">ログイン</li>
+        </ul>
+      </div>
     </div>
-    <!--よくある検索ワード-->
-    <div class="search-keyword">
-      <a href="/tag/#" class="search-tag">
-        <p class="search-tag-word">キーワード</p>
-      </a>
-      <a href="/tag/#" class="search-tag">
-        <p class="search-tag-word">キーワード</p>
-      </a>
-      <a href="/tag/#" class="search-tag">
-        <p class="search-tag-word">キーワード</p>
-      </a>
-      <a href="/tag/#" class="search-tag">
-        <p class="search-tag-word">キーワード</p>
-      </a>
-      <a href="/tag/#" class="search-tag">
-        <p class="search-tag-word">キーワード</p>
-      </a>
-    </div>
-    <!--会員メニュー-->
-    <div class="member">
-      <a href="#" class="member-register">
-        <p class="member-link">無料会員登録</p>
-      </a>
-      <a href="#" class="member-login">
-        <p class="member-link">ログイン</p>
-      </a>
-    </div>
-    <!--ここからグロナビ-->
     <nav class="nav">
       <ul>
-        <li class="nav-item"><a href="#">トップ</a></li>
-        <li class="nav-item"><a href="#">特集一覧</a></li>
-        <li class="nav-item"><a href="#">人気ランキング</a></li>
-        <li class="nav-item"><a href="#">花コラム</a></li>
+        <li class="nav-item"><a href="#">TOP</a></li>
+        <li class="nav-item"><a href="#">特集</a></li>
+        <li class="nav-item"><a href="#">ランキング</a></li>
         <li class="nav-item"><a href="#">花・植物をさがす</a></li>
+        <li class="nav-item"><a href="#">シーン別</a></li>
         <li class="nav-item"><a href="#">お手入れ・育て方</a></li>
       </ul>
     </nav>
